@@ -8,11 +8,11 @@ namespace MyProject
 {
     public class Cuboid
     {
-     
 
-        private int length;
-        private int width;
-        private int height;
+
+        protected int length;
+        protected int width;
+        protected int height;
 
         public int Length
         {
@@ -50,6 +50,8 @@ namespace MyProject
             this.width = w;
             this.height = h;
         }
+
+        public Cuboid() { }
 
         //method here ??
         //worth noting that it is not necessary to add a method here to get volume

@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Box.cs" />
-    <Compile Include="TotalVolume.cs" />
+    <Compile Include="ChooseBox.cs" />
+    <Compile Include="TotalDimensions.cs" />
     <Compile Include="Cuboid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

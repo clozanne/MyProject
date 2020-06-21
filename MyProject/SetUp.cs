@@ -9,6 +9,10 @@ namespace MyProject
     
     public class SetUp
     {
+
+        public SetUp() {
+            
+        } // thinl about adding a constructor here
         
         public int numberOfItem = Convert.ToInt32(Console.ReadLine());
         public Dictionary<string, Cuboid> items = new Dictionary<string, Cuboid>();
