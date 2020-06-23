@@ -6,13 +6,82 @@ using System.Threading.Tasks;
 
 namespace MyProject
 {
-    public class TotalDimensions : Cuboid
+    public class TotalDimensions 
     {
         public Dictionary<string, Cuboid> items;
-        //public TotalDimensions(Dictionary<string, Cuboid> items)
+
+
+
+
+        //Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
+
+        public Cuboid totalDimensionsNeeded { get; set; }  //= new Cuboid(length, width, height);
+
+        //int length = 0;
+        //int width = 0;
+        //int height = 0;
+
+
+
+        //public Cuboid totalDimensionsNeeded;    // = new Cuboid(length, width, height);
+        //public struct totalDimensionsNeeded
         //{
-        //    this.items = items;
+        //    public int length, width, height;
         //}
+        public TotalDimensions(Dictionary<string, Cuboid> items)
+        {
+            this.items = items;
+        }
+
+        public Cuboid GetTotalDimensionsNeeded(int numberOfItem)
+        {
+            //TotalDimensions totalDimensionsNeeded;
+
+
+            if (numberOfItem > 1)
+            {
+
+                int length = items.Max(r => r.Value.Length);
+
+                int width = items.Max(r => r.Value.Width);
+
+                int height = 0;
+
+                foreach (var item in items.Values)
+                {
+
+                    height += item.Height;
+                }
+
+                Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
+
+                //totalDimensionsNeeded(length, width, height);
+
+                return totalDimensionsNeeded;
+
+                //return new TotalDimensions(length, width, height);
+            }
+            else
+            {
+                int length = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Length).FirstOrDefault();
+
+                int width = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Width).FirstOrDefault();
+
+                int height = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Height).FirstOrDefault();
+
+                Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
+
+                return totalDimensionsNeeded;
+                //return new TotalDimensions(length, width, height);
+            }
+
+
+        }
+
+
+
+
+
 
         //SetUp setUp = new SetUp();
 
@@ -22,15 +91,15 @@ namespace MyProject
 
         //public Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
 
-        public TotalDimensions(int l, int w, int h) : base(l, w, h)
-        {
+        //public TotalDimensions(int l, int w, int h) : base(l, w, h)
+        //{
 
-            this.Length = length;
-            this.Width = width;
-            this.Height = height;
-        }
+        //    this.Length = length;
+        //    this.Width = width;
+        //    this.Height = height;
+        //}
 
-        public TotalDimensions() { }
+        //public TotalDimensions() { }
 
         //public TotalDimensions totalDimensionsNeeded = new TotalDimensions();
 
@@ -83,7 +152,6 @@ namespace MyProject
 
 
 
-        //Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
 
 
 
@@ -91,58 +159,18 @@ namespace MyProject
 
 
 
-        public  Cuboid GetTotalDimensionsNeeded(int numberOfItem)
-        {
-            //TotalDimensions totalDimensionsNeeded;
-
-            if (numberOfItem > 1)
-            {
-                int length = items.Max(r => r.Value.Length);
-
-                int width = items.Max(r => r.Value.Width);
-
-                int height = 0;
-
-                foreach (var item in items.Values)
-                {
-
-                    height += item.Height;
-                }
-
-               Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
-
-                return totalDimensionsNeeded;
-
-                //return new TotalDimensions(length, width, height);
-            }
-            else
-            {
-                int length = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Length).FirstOrDefault();
-
-                int width = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Width).FirstOrDefault();
-
-                int height = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Height).FirstOrDefault();
-
-                Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
-
-               return totalDimensionsNeeded;
-                //return new TotalDimensions(length, width, height);
-            }
-
-         
-        }
 
         //public Cuboid GetVolumeForOneItem()
         //{
-            //int length = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Length).FirstOrDefault();
+        //int length = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Length).FirstOrDefault();
 
-            //int width = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Width).FirstOrDefault();
+        //int width = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Width).FirstOrDefault();
 
-            //int height = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Height).FirstOrDefault();
+        //int height = items.Where(r => r.Key.Equals("item1")).Select(n => n.Value.Height).FirstOrDefault();
 
-            //Cuboid volumeOneItem = new Cuboid(length, width, height);
+        //Cuboid volumeOneItem = new Cuboid(length, width, height);
 
-            //return volumeOneItem;
+        //return volumeOneItem;
         //}
     }
 }

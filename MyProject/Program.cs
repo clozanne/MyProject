@@ -17,18 +17,26 @@ namespace MyProject
     {
         public static void Main()
         {
+            
             Console.WriteLine("How many items?");
             SetUp setup = new MyProject.SetUp();
             setup.GetAllCuboids();
 
-            //TotalDimensions totalDimensions = new TotalDimensions(setup.items);
-            TotalDimensions totalDimensions = new TotalDimensions();
-            totalDimensions.GetTotalDimensionsNeeded(setup.numberOfItem);
+            TotalDimensions totalDimensions = new TotalDimensions(setup.items);
 
-            ChooseBox chooseBox = new ChooseBox(totalDimensions.totalDimensionsNeeded);
+            //TotalDimensions totalDimensions = new TotalDimensions();
+
+            Cuboid totalDimensionsNeeded = new Cuboid(0, 0, 0);
+
+            Cuboid totalDimensionsNecessary = totalDimensions.GetTotalDimensionsNeeded(setup.numberOfItem);
+
+            //totalDimensions.GetTotalDimensionsNeeded(setup.numberOfItem);
+
+            ChooseBox chooseBox = new ChooseBox(totalDimensionsNecessary);
+            
 
 
-            //chooseBox.SelectBox();
+           chooseBox.SelectBox();
 
 
         }

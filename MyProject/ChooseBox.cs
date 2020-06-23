@@ -8,11 +8,11 @@ namespace MyProject
 {
     public class ChooseBox
     {
-        public Cuboid totalDimensionsNeeded;
+        public Cuboid totalDimensionsNecessary;
 
-        public ChooseBox(Cuboid totalDimensionsNeeded)
+        public ChooseBox(Cuboid totalDimensionsNecessary)
         {
-            this.totalDimensionsNeeded = totalDimensionsNeeded;//in this case, totalDimensionsNeeded means that it has the value of the global totalDimensionsNeeded
+            this.totalDimensionsNecessary = totalDimensionsNecessary;//in this case, totalDimensionsNeeded means that it has the value of the global totalDimensionsNeeded
         }
 
         Box1 box1 = new Box1(35, 25, 20);
@@ -22,11 +22,11 @@ namespace MyProject
 
         public Cuboid SelectBox()
         {
-            if (totalDimensionsNeeded.Length > box1.Length)
+            if (totalDimensionsNecessary.Length > box1.Length)
             {
-                if (totalDimensionsNeeded.Length > box2.Length)
+                if (totalDimensionsNecessary.Length > box2.Length)
                 {
-                    if (totalDimensionsNeeded.Length > box3.Length)
+                    if (totalDimensionsNecessary.Length > box3.Length)
                     {
                         Console.WriteLine("Please seek alternative packaging");
                         return null;
