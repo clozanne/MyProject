@@ -20,7 +20,8 @@ namespace MyProject
             
             Console.WriteLine("How many items?");
             SetUp setup = new MyProject.SetUp();
-            setup.GetAllCuboids();
+            setup.GetTotalNumberOfItems();
+            //setup.GetAllCuboids();
 
             TotalDimensions totalDimensions = new TotalDimensions(setup.items);
 

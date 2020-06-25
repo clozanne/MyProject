@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Box.cs" />
+    <Compile Include="BoxException.cs" />
     <Compile Include="ChooseBox.cs" />
     <Compile Include="TotalDimensions.cs" />
     <Compile Include="Cuboid.cs" />

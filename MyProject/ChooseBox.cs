@@ -29,6 +29,7 @@ namespace MyProject
                     if (totalDimensionsNecessary.Length > box3.Length)
                     {
                         Console.WriteLine("Please seek alternative packaging");
+                        Console.ReadLine();
                         return null;
                     }
                     

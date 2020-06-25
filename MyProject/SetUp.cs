@@ -13,11 +13,62 @@ namespace MyProject
         public SetUp() {
             
         } // thinl about adding a constructor here
-        
-        public int numberOfItem = Convert.ToInt32(Console.ReadLine());
+
+        //public int numberOfItem = Convert.ToInt32(Console.ReadLine());
+
+        public int numberOfItem;
+
+        public void GetTotalNumberOfItems()
+        {
+            //bool isNumeric = false;
+           // string number;
+            //bool num = false;
+            do
+            {
+                string line = Console.ReadLine();
+                //numberOfItem = Convert.ToInt32(Console.ReadLine());
+
+                //number = Console.ReadLine();
+                //bool result = Int32.TryParse(numberOfItem, out isNumeric);
+                try
+                {
+                    numberOfItem = Int32.Parse(line);
+                    // int numberOfItem = Int32.TryParse(number, out numberOfItem);
+
+                    if (numberOfItem <= 0) //|| result = false) //|| !Int32.TryParse(numberOfItem, out num)
+                    {
+                        throw new BoxException();
+                    }
+                }
+                catch (BoxException exception)
+                {
+                    Console.WriteLine(exception.Message + "\n" + numberOfItem +" is not a positive number. Please enter a positive number:");
+                    numberOfItem = 0;
+                }
+                catch (FormatException formatException)
+                {
+                    // if (isNumeric = false)
+                    {
+                        Console.WriteLine(formatException.Message + "\n" + line + " is not an integer. Please enter an integer:");
+                    }
+
+                }
+
+                
+            }
+            while (numberOfItem <= 0);
+            GetAllCuboids(numberOfItem);
+        }
+            
+   
+
+
+
+
+
         public Dictionary<string, Cuboid> items = new Dictionary<string, Cuboid>();
 
-        public Dictionary<string, Cuboid> GetAllCuboids()
+        public Dictionary<string, Cuboid> GetAllCuboids(int numberOfItem)
         {
 
             for (int i = 0; i < numberOfItem; i++)
