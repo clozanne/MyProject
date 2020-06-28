@@ -11,23 +11,9 @@ namespace MyProject
         public Dictionary<string, Cuboid> items;
 
 
+        public Cuboid totalDimensionsNeeded { get; set; }  
 
 
-        //Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
-
-        public Cuboid totalDimensionsNeeded { get; set; }  //= new Cuboid(length, width, height);
-
-        //int length = 0;
-        //int width = 0;
-        //int height = 0;
-
-
-
-        //public Cuboid totalDimensionsNeeded;    // = new Cuboid(length, width, height);
-        //public struct totalDimensionsNeeded
-        //{
-        //    public int length, width, height;
-        //}
         public TotalDimensions(Dictionary<string, Cuboid> items)
         {
             this.items = items;
@@ -35,8 +21,6 @@ namespace MyProject
 
         public Cuboid GetTotalDimensionsNeeded(int numberOfItem)
         {
-            //TotalDimensions totalDimensionsNeeded;
-
 
             if (numberOfItem > 1)
             {
@@ -55,11 +39,8 @@ namespace MyProject
 
                 Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
 
-                //totalDimensionsNeeded(length, width, height);
-
                 return totalDimensionsNeeded;
 
-                //return new TotalDimensions(length, width, height);
             }
             else
             {
@@ -72,7 +53,7 @@ namespace MyProject
                 Cuboid totalDimensionsNeeded = new Cuboid(length, width, height);
 
                 return totalDimensionsNeeded;
-                //return new TotalDimensions(length, width, height);
+
             }
 
 

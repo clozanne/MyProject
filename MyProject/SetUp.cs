@@ -17,6 +17,8 @@ namespace MyProject
         //public int numberOfItem = Convert.ToInt32(Console.ReadLine());
 
         public int numberOfItem;
+        public int dimension;
+        public string dimensionsString; //could these all be private??
 
         public void GetTotalNumberOfItems()
         {
@@ -93,22 +95,59 @@ namespace MyProject
             
         }
 
-       
+        
 
         public int[] GetInput()
         {
-            //Console.WriteLine("Please enter the dimensions of your item :");
-            Console.WriteLine("Dimension 1:");
-            int dimension1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Dimension 2:");
-            int dimension2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Dimension 3:");
-            int dimension3 = Convert.ToInt32(Console.ReadLine());
-
+            
             int[] dimensions = new int[3];
-            dimensions[0] = dimension1;
-            dimensions[1] = dimension2;
-            dimensions[2] = dimension3;
+            for (int i = 0; i < dimensions.Length;)
+            {
+                try
+                {
+                    Console.WriteLine("Dimension " + (i + 1) + ":");
+                    dimensionsString = Console.ReadLine();
+                    dimension = Int32.Parse(dimensionsString);
+
+                    if (dimension <= 0)
+                    {
+                        throw new BoxException();
+                    }
+                    else
+                    {
+                        dimensions[i++] = dimension;
+                    }
+                }
+
+                catch (BoxException exception)
+                {
+                    Console.WriteLine(exception.Message + "\n" + dimensionsString + " is not a positive number. Please enter a positive number:");
+                   
+                }
+
+                catch (FormatException formatException)
+                {
+                    // if (isNumeric = false)
+                    {
+                        Console.WriteLine(formatException.Message + "\n" + dimensionsString + " is not an integer. Please try again. Only positive integers. If not an integer please round to the nearest whole number:");
+                    }
+
+                }
+            }
+
+
+
+            //    Console.WriteLine("Dimension 1:");
+            //int dimension1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Dimension 2:");
+            //int dimension2 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Dimension 3:");
+            //int dimension3 = Convert.ToInt32(Console.ReadLine());
+
+//            int[] dimensions = new int[3];
+            //dimensions[0] = dimension1;
+            //dimensions[1] = dimension2;
+            //dimensions[2] = dimension3;
 
             return dimensions;
 
