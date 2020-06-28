@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyProject
 {
-    public class ChooseBox 
+    public class ChooseBox
     {
         public Cuboid totalDimensionsNecessary;
 
@@ -24,52 +24,63 @@ namespace MyProject
         public Cuboid SelectBox()
         {
 
-            if (totalDimensionsNecessary.Length > box1.Length)
-            {
-                if (totalDimensionsNecessary.Length > box2.Length)
-                {
-                    if (totalDimensionsNecessary.Length > box3.Length)
-                    {
-                        Console.WriteLine("Please seek alternative packaging");
-                        Console.ReadLine();
-                        return null;
-                    }
-
-                    else
-                    {
-                        Console.WriteLine("Choose box 3. Please wait while we check for stock...");
-
-                        Box3 appropriateBox = new Box3(61, 46, 45);
-
-                        return appropriateBox;
-
-
-                    }
-
-
-                }
-                else
-                {
-                    Console.WriteLine("Choose box 2. Please wait while we check for stock...");
-
-                    Box2 appropriateBox = new Box2(45, 35, 16);
-
-                    return appropriateBox;
-                }
-            }
-            else
+            if ((totalDimensionsNecessary.Length < box1.Length) && (totalDimensionsNecessary.Height < box1.Height) && (totalDimensionsNecessary.Width < box1.Width))
             {
                 Console.WriteLine("Choose box 1. Please wait while we check for stock...");
 
                 Box1 appropriateBox = new Box1(35, 25, 20);
 
                 return appropriateBox;
-
             }
+            else if ((totalDimensionsNecessary.Length < box2.Length) && (totalDimensionsNecessary.Height < box2.Height) && (totalDimensionsNecessary.Width < box2.Width))
+            {
+                Console.WriteLine("Choose box 2. Please wait while we check for stock...");
 
+                Box2 appropriateBox = new Box2(45, 35, 16);
+
+                return appropriateBox;
+            }
+            else if ((totalDimensionsNecessary.Length < box3.Length) && (totalDimensionsNecessary.Height < box3.Height) && (totalDimensionsNecessary.Width < box3.Width))
+            {
+                Console.WriteLine("Choose box 3. Please wait while we check for stock...");
+
+                Box3 appropriateBox = new Box3(61, 46, 45);
+
+                return appropriateBox;
+            }
+            else {
+                Console.WriteLine("Please seek alternative packaging");
+                Console.ReadLine();
+                return null;
+            }
         }
-
     }
 }
+
+
+//                }
+                
+//                {
+//                    Console.WriteLine("Choose box 2. Please wait while we check for stock...");
+
+//                    Box2 appropriateBox = new Box2(45, 35, 16);
+
+//                    return appropriateBox;
+//                }
+//            }
+//            else
+//            {
+//                Console.WriteLine("Choose box 1. Please wait while we check for stock...");
+
+//                Box1 appropriateBox = new Box1(35, 25, 20);
+
+//                return appropriateBox;
+
+//            }
+
+//        }
+
+//    }
+//}
 
 

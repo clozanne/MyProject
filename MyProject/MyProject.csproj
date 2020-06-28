@@ -60,6 +60,7 @@
     <Compile Include="BoxException.cs" />
     <Compile Include="ChooseBox.cs" />
     <Compile Include="IStock.cs" />
+    <Compile Include="Rotate.cs" />
     <Compile Include="StockChecker.cs" />
     <Compile Include="TotalDimensions.cs" />
     <Compile Include="Cuboid.cs" />
