@@ -17,10 +17,20 @@ namespace MyProject
     {
         public static void Main()
         {
-            
-            Console.WriteLine("How many items?");
             SetUp setup = new MyProject.SetUp();
-            setup.GetTotalNumberOfItems();
+            //int numberOfItem;
+
+        Console.WriteLine("How many items?");
+
+            do
+            {
+
+                string line = Console.ReadLine();
+                setup.GetTotalNumberOfItems(line);
+            }
+            while (setup.numberOfItem <= 0);
+
+            setup.GetAllCuboids(setup.numberOfItem);
 
             TotalDimensions totalDimensions = new TotalDimensions(setup.items);
 

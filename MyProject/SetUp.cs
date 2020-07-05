@@ -16,18 +16,21 @@ namespace MyProject
 
         //public int numberOfItem = Convert.ToInt32(Console.ReadLine());
 
-        public int numberOfItem;
-        public int dimension;
-        public string dimensionsString; //could these all be private??
+        public int numberOfItem; //property? that it equals the instance in the main method
+        public string line;
+        private int dimension;
+        private string dimensionsString; //could these all be private??
 
-        public void GetTotalNumberOfItems()
+        
+        public void GetTotalNumberOfItems(string line)
         {
             //bool isNumeric = false;
-           // string number;
+            // string number;
             //bool num = false;
-            do
-            {
-                string line = Console.ReadLine();
+            //line = Console.ReadLine();
+            //do
+            //{
+                //string line = Console.ReadLine();
                 //numberOfItem = Convert.ToInt32(Console.ReadLine());
 
                 //number = Console.ReadLine();
@@ -45,21 +48,22 @@ namespace MyProject
                 catch (BoxException exception)
                 {
                     Console.WriteLine(exception.Message + "\n" + numberOfItem +" is not a positive number. Please enter a positive number:");
-                    numberOfItem = 0;
+                    //numberOfItem = 0;
                 }
                 catch (FormatException formatException)
                 {
                     // if (isNumeric = false)
                     {
                         Console.WriteLine(formatException.Message + "\n" + line + " is not an integer. Please enter an integer:");
-                    }
-
+                        numberOfItem = 0;
                 }
 
+                }
+            //return numberOfItem;
                 
-            }
-            while (numberOfItem <= 0);
-            GetAllCuboids(numberOfItem);
+            //}
+            //while (numberOfItem <= 0);
+            //GetAllCuboids(numberOfItem);
         }
             
    

@@ -30,7 +30,7 @@ namespace MyProject
 
             if (numberOfItem > 1)
             {
-                if ((items.Sum(p => p.Value.Width) < box2.Width) || (items.Sum(p => p.Value.Width) < box3.Width) && items.Sum(p => p.Value.Height) < box2.Height) {
+                if ((items.Sum(p => p.Value.Width) < box2.Width) || (items.Sum(p => p.Value.Width) < box3.Width) && items.Sum(p => p.Value.Height) > box2.Height || (items.Sum(p => p.Value.Width) < box3.Width) && items.Sum(p => p.Value.Height) > box3.Height) {
 
                     for (int i = 0; i < newDimensions.Length; i++)
                     {
