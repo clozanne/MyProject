@@ -23,14 +23,7 @@ namespace Tests
             [SetUp]
             public void SetUp()
             {
-                items = new Dictionary<string, Cuboid>()
-                                            {
-                                                {"item1", new Cuboid(44, 10, 15) },
-                                                {"item2", new Cuboid(43, 10, 14) },
-                                                {"item3", new Cuboid(42, 10, 13) },
-
-                                            };
-                numberOfItems = 3;
+        
 
 
             }
@@ -46,15 +39,25 @@ namespace Tests
             }
 
             [Test]
-            public void GetTotalDimensionsNeeded_ReturnsTheSmallestVolume_WhenCalled()
+            public void ChangeThiSLaterrrrr()
             {
                 #region Arrange
+                
+                int[] expected = new int[] { 44, 10, 42};
+
+                items = new Dictionary<string, Cuboid>()
+                                            {
+                                                {"item1", new Cuboid(44, 10, 15) },
+                                                {"item2", new Cuboid(43, 10, 14) },
+                                                {"item3", new Cuboid(42, 10, 13) },
+
+                                            };
+                int numberOfItem = 3;
                 TotalDimensions totalDimensions = new TotalDimensions(items);
-                int[] expected = new int[] { 44, 30, 15};
                 #endregion
 
                 #region Act
-                newDimensions = totalDimensions.GetTotalDimensionsNeeded(numberOfItems);
+                newDimensions = totalDimensions.GetTotalDimensionsNeeded(numberOfItem);
                 #endregion
 
                 #region Assert
@@ -62,9 +65,33 @@ namespace Tests
                 #endregion
             }
 
+
             //Claire : test here that no matter what is passed in the smallest volume is always produced
             //do random ways of getting the dimensions, label as 'smallestway' 'largestway' and then check actual way is the smallest way
 
+            [Test]
+            public void SmallestBoxIsAlwaysChosen() {
+                #region Arrange
+                
+                int numberOfItem = 3;
+                int[] expected = new int[] { 33, 22, 27 };
+                items = new Dictionary<string, Cuboid>()
+                                            {
+                                                {"item1", new Cuboid(33, 22, 12) },
+                                                {"item2", new Cuboid(32, 21, 14) },
+                                                {"item3", new Cuboid(4, 2, 1) }
+                                            };
+                TotalDimensions totalDimensions = new TotalDimensions(items);
+                #endregion
+
+                #region Act
+                newDimensions = totalDimensions.GetTotalDimensionsNeeded(numberOfItem);
+                #endregion
+
+                #region Assert
+                Assert.AreEqual(expected, newDimensions);
+                #endregion
+            }
         }
     }
 }

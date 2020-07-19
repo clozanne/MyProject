@@ -14,7 +14,7 @@ namespace MyProject
 
         //string CheckIfBoxIsInStock(Box3 appropriateBox);
 
-        void CheckIfBoxIsInStock(Cuboid neededBox);
+        bool CheckIfBoxIsInStock(Cuboid neededBox);
 
     }
 }

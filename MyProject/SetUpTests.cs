@@ -17,7 +17,7 @@ namespace Tests
         private Mock<IStock> mockStock;
         //private SetUp setUp;
         //private int numberOfItem;
-        //private string line;
+        private string line;
 
         [SetUp]
         public void SetUp()
@@ -41,17 +41,55 @@ namespace Tests
 
 
 
-        
+        //BoxException ExpectedException;
 
         [Test]
+        //[TestCase(null, typeof(BoxException))]
         public void ChangeThisTitleLater() {
             #region Arrange
             SetUp setUp = new SetUp();
-            string line = "0";
+            line = "0";
 
-            var ex = Assert.Throws<Exception>(() => setUp.GetTotalNumberOfItems(line));
+            //var ex = Assert.Throws<Exception>(() => setUp.GetTotalNumberOfItems(line));
+            //setUp.GetTotalNumberOfItems(line);
+            //Assert.IsNull();
+            //Assert.Throws(Type exception, setUp.GetTotalNumberOfItems(line));
+            //TestDelegate throwException = () => setUp.GetTotalNumberOfItems(line);
 
-            Assert.IsTrue(ex.Message.Contains("not"));
+            //Exception expectedException = new Exception();
+
+            Assert.That(() => setUp.GetTotalNumberOfItems(line), null);
+
+            //Assert.Throws(typeof (BoxException), throwException);
+
+            //Assert.Throws<BoxException>(() => setUp.GetTotalNumberOfItems(line));
+
+            //Assert.IsNotNull(throwException);//this works
+
+            //try
+            //{
+            //    setUp.GetTotalNumberOfItems(line);
+            //    Assert.Throws<MyProject.BoxException>(() => setUp.GetTotalNumberOfItems(line)); // If it gets to this line, no exception was thrown
+            //}
+            //catch (BoxException) { }
+
+            //Assert.Throws<ArgumentException>(
+            //  new TestDelegate(throwException));
+
+            //Assert.Throws<BoxException>(() => setUp.GetTotalNumberOfItems(line));
+
+            //Assert.IsNull(throwException);// = () => setUp.GetTotalNumberOfItems(line));
+
+
+            //Assert.Throws(typeof(BoxException),
+            //  delegate { throw new BoxException(); }); //THIS WORKS
+
+            //       BoxException ex = Assert.Throws<BoxException>(
+            //delegate { throw new BoxException(); }); //this works
+
+            //Assert.Throws<BoxException>(
+            //  delegate { throw new BoxException(); });//THIS WORKS
+            ////Assert.IsTrue(ex.Message.Contains("not"));
 
 
 

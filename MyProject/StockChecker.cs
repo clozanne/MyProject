@@ -11,15 +11,17 @@ namespace MyProject
     {
 
         private readonly Mock<IStock> stock;
+        private bool isInStock;
 
         public StockChecker()
         {
             stock = new Mock<IStock>();
         }
 
-        public void CheckIfBoxIsInStock(Cuboid neededBox)
+        public bool CheckIfBoxIsInStock(Cuboid neededBox)
         {
             stock.Object.CheckIfBoxIsInStock(neededBox);
+            return isInStock;
         }
 
         //public Cuboid neededBox;
