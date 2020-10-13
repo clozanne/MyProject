@@ -63,12 +63,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Box.cs" />
+    <Compile Include="Box1.cs" />
+    <Compile Include="Box2.cs" />
+    <Compile Include="Box3.cs" />
     <Compile Include="BoxException.cs" />
     <Compile Include="ChooseBox.cs" />
     <Compile Include="ChooseBoxTests.cs" />
+    <Compile Include="CuboidCreator.cs" />
     <Compile Include="IStock.cs" />
     <Compile Include="Rotate.cs" />
+    <Compile Include="RotatedBox.cs" />
     <Compile Include="RotateTests.cs" />
     <Compile Include="StockChecker.cs" />
     <Compile Include="SetUpTests.cs" />

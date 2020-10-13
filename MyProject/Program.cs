@@ -44,14 +44,14 @@ namespace MyProject
 
             //Cuboid totalDimensionsNecessary = totalDimensions.GetTotalDimensionsNeeded(setup.numberOfItem);
 
-            Cuboid totalDimensionsNecessary = rotate.RotateCuboid(newDimensions);
+            Cuboid totalDimensionsNecessary = rotate.GetCuboid(newDimensions);
 
             Cuboid appropriateBox = new Cuboid(0, 0, 0);
 
             ChooseBox chooseBox = new ChooseBox(totalDimensionsNecessary);
 
 
-            Cuboid neededBox = chooseBox.SelectBox();
+            Cuboid neededBox = chooseBox.GetCuboid();
 
             StockChecker stockChecker = new StockChecker();
 

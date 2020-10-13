@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyProject
 {
-    public class ChooseBox
+    public class ChooseBox : CuboidCreator
     {
         public Cuboid totalDimensionsNecessary;
 
@@ -21,7 +21,7 @@ namespace MyProject
         Box3 box3 = new Box3(61, 46, 45);
 
 
-        public Cuboid SelectBox()
+        public override Cuboid GetCuboid()
         {
 
             if ((totalDimensionsNecessary.Length < box1.Length) && (totalDimensionsNecessary.Height < box1.Height) && (totalDimensionsNecessary.Width < box1.Width))

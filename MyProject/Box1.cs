@@ -17,30 +17,15 @@ namespace MyProject
             this.height = 20;
         }
 
+
+ 
+
         //Box1 box1 = new Box1(35, 25, 20); struct?
     }
 
-    public class Box2 : Cuboid
-    {
-        public Box2(int l, int w, int h) : base(l, w, h)
-        {
 
-            this.length = 45;
-            this.width = 35;
-            this.height = 16;
-        }
-    }
 
-    public class Box3 : Cuboid
-    {
-        public Box3(int l, int w, int h) : base(l, w, h)
-        {
 
-            this.length = 61;
-            this.width = 46;
-            this.height = 45;
-        }
-    }
 
     //You probably could have them in a static class, with static read-only properties.
     //only use const for internal/protected/private values

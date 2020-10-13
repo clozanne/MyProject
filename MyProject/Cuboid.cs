@@ -51,6 +51,8 @@ namespace MyProject
             this.height = h;
         }
 
+        //public abstract Cuboid GetDimensions();
+
         //public Cuboid() { }
 
         //method here ??

@@ -45,7 +45,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var cuboid = rotate.RotateCuboid(newDimensions);
+                var cuboid = rotate.GetCuboid(newDimensions);
                 #endregion
 
                 #region Assert
@@ -65,7 +65,7 @@ namespace Tests
 
                 #region Act
                 int actualLength;
-                var cuboid = rotate.RotateCuboid(newDimensions);
+                var cuboid = rotate.GetCuboid(newDimensions);
                 actualLength = cuboid.Length;
                 #endregion
 

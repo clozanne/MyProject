@@ -36,7 +36,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var box = chooseBox.SelectBox();
+                var box = chooseBox.GetCuboid();
                 #endregion
 
                 #region Assert
@@ -54,7 +54,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var box2 = chooseBox.SelectBox();
+                var box2 = chooseBox.GetCuboid();
                 #endregion
 
                 #region Assert
@@ -73,7 +73,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var box3 = chooseBox.SelectBox();
+                var box3 = chooseBox.GetCuboid();
                 #endregion
 
                 #region Assert
@@ -92,7 +92,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var box4 = chooseBox.SelectBox();
+                var box4 = chooseBox.GetCuboid();
                 #endregion
 
                 #region Assert
@@ -110,7 +110,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var box = chooseBox.SelectBox();
+                var box = chooseBox.GetCuboid();
                 #endregion
 
                 #region Assert
