@@ -66,8 +66,7 @@ namespace Tests
             }
 
 
-            //Claire : test here that no matter what is passed in the smallest volume is always produced
-            //do random ways of getting the dimensions, label as 'smallestway' 'largestway' and then check actual way is the smallest way
+
 
             [Test]
             public void SmallestBoxIsAlwaysChosen() {

@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
 
-//in documentation state that you never find the total volume as unecessary
 
 namespace MyProject
 {
@@ -18,7 +17,6 @@ namespace MyProject
         public static void Main()
         {
             SetUp setup = new MyProject.SetUp();
-            //int numberOfItem;
 
         Console.WriteLine("How many items?");
 
@@ -42,7 +40,6 @@ namespace MyProject
 
             Rotate rotate = new Rotate(newDimensions);
 
-            //Cuboid totalDimensionsNecessary = totalDimensions.GetTotalDimensionsNeeded(setup.numberOfItem);
 
             Cuboid totalDimensionsNecessary = rotate.GetCuboid(newDimensions);
 
@@ -56,6 +53,14 @@ namespace MyProject
             StockChecker stockChecker = new StockChecker();
 
             stockChecker.CheckIfBoxIsInStock(neededBox);
+
+            stockChecker.ChooseAvailableBox(neededBox);
+
+            Cuboid newBox = stockChecker.ChooseAvailableBox(neededBox);
+
+            stockChecker.CheckIfNewBoxIsInStock(newBox);
+
+
 
 
 

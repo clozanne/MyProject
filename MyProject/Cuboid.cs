@@ -51,11 +51,5 @@ namespace MyProject
             this.height = h;
         }
 
-        //public abstract Cuboid GetDimensions();
-
-        //public Cuboid() { }
-
-        //method here ??
-        //worth noting that it is not necessary to add a method here to get volume
     }
 }

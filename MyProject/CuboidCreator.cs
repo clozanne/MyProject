@@ -8,11 +8,6 @@ namespace MyProject
 {
     public abstract class CuboidCreator
     {
-        //public CuboidCreator()
-        //{
-        //    this.GetCuboid();
-        //}
-
         public abstract Cuboid GetCuboid();
 
     }

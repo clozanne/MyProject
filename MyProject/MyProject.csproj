@@ -72,6 +72,7 @@
     <Compile Include="CuboidCreator.cs" />
     <Compile Include="IStock.cs" />
     <Compile Include="Rotate.cs" />
+    <Compile Include="AppropriateBox.cs" />
     <Compile Include="RotatedBox.cs" />
     <Compile Include="RotateTests.cs" />
     <Compile Include="StockChecker.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Moq;
@@ -24,45 +25,44 @@ namespace MyProject
             return isInStock;
         }
 
-        //public Cuboid neededBox;
+  
+        
+        public Cuboid ChooseAvailableBox( Cuboid neededBox)
+        {
+            if (isInStock == false)
+            {
+                string box = neededBox.ToString();
+                string boxNumberTemp = box.Substring(13);
+                int boxNumber = Convert.ToInt32(boxNumberTemp);
+                string nextBoxAvailable = "Box" + (boxNumber + 1).ToString();
+                Console.WriteLine("Box is not in stock. Please choose " + nextBoxAvailable + ". Please wait while we check for stock of " +nextBoxAvailable + "...");
+                if (nextBoxAvailable == "Box2")
+                {
+                    Box2 newBox = new Box2(45, 35, 16);
 
-        //IStock stock;
+                    return newBox;
+                }
+                else
+                {
+                    Box3 newBox = new Box3(61, 46, 45);
 
-        //public StockChecker(IStock stockChecker)
-        //{
-        //    stock = stockChecker;
-        //}
+                    return newBox;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Box is in stock");
+                return null;
+            }
 
-        //private readonly IEnumerable<IStock> Stock;
+          
+        }
 
-        //public StockChecker(IEnumerable<IStock> stock)
-        //{
-        //    this.Stock = stock;
-        //}
+        public bool CheckIfNewBoxIsInStock(Cuboid newBox)
+        {
+            stock.Object.CheckIfBoxIsInStock(newBox);
+            return isInStock;
+        }
 
-        //public IEnumerable<bool> CheckIfBoxIsInStock(Cuboid neededBox)
-        //{   var isInStock = new bool();
-        //    this.Stock.FirstOrDefault(x => x.CheckIfBoxIsInStock(neededBox));
-        //    return isInStock;
-
-        //}
-
-        //    public StockChecker(Cuboid neededBox)
-        //{
-        //    neededBox = neededBox;
-        //}
-
-        //public void CheckStock(Cuboid neededBox)
-        //{
-
-
-        //    stock.CheckIfBoxIsInStock(neededBox);//error thrown here
-
-        //}
-        //uncimment this!
-        //public bool CheckIfBoxIsInStock(Cuboid neededBox) 
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

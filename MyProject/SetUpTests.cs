@@ -15,21 +15,14 @@ namespace Tests
     public class SetUpTests
     {
         private Mock<IStock> mockStock;
-        //private SetUp setUp;
-        //private int numberOfItem;
+
         private string line;
 
         [SetUp]
         public void SetUp()
         {
-            //assign arbitrary values to variables
 
             mockStock = new Mock<IStock>();
-           //SetUp setUp = new SetUp();
-           // string line = "1";
-
-
-
 
         }
 
@@ -40,12 +33,9 @@ namespace Tests
         }
 
 
-
-        //BoxException ExpectedException;
-
         [Test]
-        //[TestCase(null, typeof(BoxException))]
-        public void ChangeThisTitleLater() {
+
+        public void CheckforExceptionThrown() {
             #region Arrange
             SetUp setUp = new SetUp();
             line = "0";
@@ -111,7 +101,7 @@ namespace Tests
         public void TestException() {
             #region Arrange
             SetUp setUp = new SetUp() ;
-            //numberOfItem = 0;
+
             string line = "-1";
             Exception expectedException = null;
 
@@ -119,13 +109,7 @@ namespace Tests
 
             #region Act
             TestDelegate throwException = () => setUp.GetTotalNumberOfItems(line);
-            //setUp.GetTotalNumberOfItems(line);
-            //Exception actualException = setUp.GetTotalNumberOfItems(line);
-            ////void CallThrowException()
-            ////{
-            ////    setUp.GetTotalNumberOfItems();
-            ////}
-            //Action GTNOI = () => setUp.GetTotalNumberOfItems(line);
+
             #endregion
 
             #region Assert
@@ -229,35 +213,7 @@ namespace Tests
             Assert.AreEqual(expected, actual);
             #endregion
         }
-        
-        [Test]
-        public void GetInput_ReturnsArrayofInts_whenCalled()
-        {
-            //#region Arrange
-            //SetUp setUp = new SetUp();
-            //string dimensionsString = "0";
-            //TestDelegate hello = setUp.GetInput();
-            //WORK OUT HOW TO USE TEST DELEGATES
-            //#endregion
 
-            //#region Act
-            //setUp.GetInput();
-            //#endregion
-
-            //#region Assert
-            //Assert.Throws<BoxException>(setUp.GetInput());
-            //#endregion
-        }
-
-
-        #region Arrange
-        #endregion
-
-        #region Act
-        #endregion
-
-        #region Assert
-        #endregion
 
     }
 }

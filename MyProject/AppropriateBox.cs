@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace MyProject
 {
-    public interface IStock
+    public class AppropriateBox : Cuboid
     {
-        bool CheckIfBoxIsInStock(Cuboid neededBox);
+        public AppropriateBox(int l, int w, int h) : base(l, w, h)
+        {
+
+    
+        }
 
     }
 }

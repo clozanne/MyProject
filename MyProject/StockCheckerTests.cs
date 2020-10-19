@@ -33,7 +33,7 @@ namespace Tests
             [Test]
             public void StockChecker_CallsUponInterface_AndReturnsAUsableAnswer_ForIfBoxIsInStock() {
                 #region Arrange
-                mockStock = new Mock<IStock>();//this should technically go in the setup part
+                mockStock = new Mock<IStock>();
                 stockChecker = new StockChecker();
                 Cuboid neededBox = new Cuboid(5, 4, 3);
                 mockStock.Setup(r => r.CheckIfBoxIsInStock(neededBox));

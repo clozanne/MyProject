@@ -12,35 +12,22 @@ namespace MyProject
 
         public SetUp() {
             
-        } // thinl about adding a constructor here
+        } 
 
-        //public int numberOfItem = Convert.ToInt32(Console.ReadLine());
-
-        public int numberOfItem; //property? that it equals the instance in the main method
+        public int numberOfItem; 
         public string line;
         private int dimension;
-        private string dimensionsString; //could these all be private??
+        private string dimensionsString; 
 
         
         public void GetTotalNumberOfItems(string line)
         {
-            //bool isNumeric = false;
-            // string number;
-            //bool num = false;
-            //line = Console.ReadLine();
-            //do
-            //{
-                //string line = Console.ReadLine();
-                //numberOfItem = Convert.ToInt32(Console.ReadLine());
 
-                //number = Console.ReadLine();
-                //bool result = Int32.TryParse(numberOfItem, out isNumeric);
                 try
                 {
                     numberOfItem = Int32.Parse(line);
-                    // int numberOfItem = Int32.TryParse(number, out numberOfItem);
 
-                    if (numberOfItem <= 0) //|| result = false) //|| !Int32.TryParse(numberOfItem, out num)
+                    if (numberOfItem <= 0) 
                     {
                         throw new BoxException();
                     }
@@ -48,22 +35,18 @@ namespace MyProject
                 catch (BoxException exception)
                 {
                     Console.WriteLine(exception.Message + "\n" + numberOfItem +" is not a positive number. Please enter a positive number:");
-                    //numberOfItem = 0;
+                
                 }
                 catch (FormatException formatException)
                 {
-                    // if (isNumeric = false)
+
                     {
                         Console.WriteLine(formatException.Message + "\n" + line + " is not an integer. Please enter an integer:");
                         numberOfItem = 0;
                 }
 
                 }
-            //return numberOfItem;
-                
-            //}
-            //while (numberOfItem <= 0);
-            //GetAllCuboids(numberOfItem);
+
         }
             
    
@@ -131,7 +114,7 @@ namespace MyProject
 
                 catch (FormatException formatException)
                 {
-                    // if (isNumeric = false)
+
                     {
                         Console.WriteLine(formatException.Message + "\n" + dimensionsString + " is not an integer. Please try again. Only positive integers. If not an integer please round to the nearest whole number:");
                     }
@@ -139,19 +122,6 @@ namespace MyProject
                 }
             }
 
-
-
-            //    Console.WriteLine("Dimension 1:");
-            //int dimension1 = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("Dimension 2:");
-            //int dimension2 = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("Dimension 3:");
-            //int dimension3 = Convert.ToInt32(Console.ReadLine());
-
-//            int[] dimensions = new int[3];
-            //dimensions[0] = dimension1;
-            //dimensions[1] = dimension2;
-            //dimensions[2] = dimension3;
 
             return dimensions;
 

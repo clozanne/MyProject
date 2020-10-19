@@ -11,9 +11,32 @@ namespace MyProject
         public Box3(int l, int w, int h) : base(l, w, h)
         {
 
-            this.length = 61;
-            this.width = 46;
-            this.height = 45;
+            const int length = 61;
+            const int width = 46;
+            const int height = 45;
         }
+
+        //new private int length;
+        //new private int width;
+        //new private int height;
+
+        //new public int Length
+        //{
+        //    get { return length; }
+
+
+        //}
+
+        //new public int Width
+        //{
+        //    get { return width; }
+
+        //}
+
+        //new public int Height
+        //{
+        //    get { return height; }
+
+        //}
     }
 }
