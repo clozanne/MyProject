@@ -20,9 +20,9 @@ namespace MyProject
             this.items = items;
         }
 
-        Box1 box1 = new Box1(35, 25, 20);
-        Box2 box2 = new Box2(45, 35, 16);
-        Box3 box3 = new Box3(61, 46, 45);
+        //Box1 box1 = new Box1(35, 25, 20);
+        //Box2 box2 = new Box2(45, 35, 16);
+        //Box3 box3 = new Box3(61, 46, 45);
 
 
         public int[] GetTotalDimensionsNeeded(int numberOfItem)

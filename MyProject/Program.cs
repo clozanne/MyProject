@@ -6,16 +6,22 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 
 namespace MyProject
 {
-    public class Program
+    
+    public class Program { 
 
+        
   
-    {
+    
         public static void Main()
         {
+
+
             SetUp setup = new MyProject.SetUp();
 
         Console.WriteLine("How many items?");

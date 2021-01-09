@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 namespace MyProject
 {
@@ -10,7 +12,8 @@ namespace MyProject
     public class SetUp
     {
 
-        public SetUp() {
+
+    public SetUp() {
             
         } 
 
@@ -82,7 +85,44 @@ namespace MyProject
             
         }
 
-        
+        //public Dictionary<string, Cuboid> GetCuboidFromID(int numberOfItem)
+        //{
+        //    //    IQueryable<ItemDimension> itemQuery =
+        //    //    from dimensionItem in ItemDimensions
+        //    //    where dimensionItem.ItemId == "VARIABLE HERE"
+        //    //    select ;
+
+        //    //    //IQueryable<Customer> custQuery =
+        //    //    //from cust in Customers
+        //    //    //where cust.City == "London"
+        //    //    //select cust;
+
+
+        //    DataContext db = new DataContext
+        //    (@"FilePath");
+        //    Table<ItemDimension> ItemDimensions = db.GetTable<ItemDimension>();
+        //    db.Log = Console.Out;
+
+        //    IQueryable<ItemDimension> itemQuery =
+        //    from dimensionItem in ItemDimensions
+        //    where dimensionItem.ItemId == "VARIABLE HERE"
+        //    select dimensionItem;
+
+        //    foreach (ItemDimension dimensionItem in itemQuery)
+        //    {
+        //        Console.WriteLine("Length={0}, Width={1}, Height={2}", dimensionItem.ItemId,
+        //            dimensionItem.Length, dimensionItem.Width, dimensionItem.Height);
+        //    }
+
+        //    Cuboid cuboid = new Cuboid(length, width, height);
+
+
+        //    string name = "item" + (i + 1).ToString();
+        //    items.Add(name, new Cuboid(length, width, height));
+
+        //    return items;
+        //}
+
 
         public int[] GetInput()
         {

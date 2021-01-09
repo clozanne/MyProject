@@ -32,19 +32,20 @@ namespace MyProject
             if (isInStock == false)
             {
                 string box = neededBox.ToString();
+                //string boxNumberTemp = box.Substring(13);
                 string boxNumberTemp = box.Substring(13);
                 int boxNumber = Convert.ToInt32(boxNumberTemp);
                 string nextBoxAvailable = "Box" + (boxNumber + 1).ToString();
                 Console.WriteLine("Box is not in stock. Please choose " + nextBoxAvailable + ". Please wait while we check for stock of " +nextBoxAvailable + "...");
                 if (nextBoxAvailable == "Box2")
                 {
-                    Box2 newBox = new Box2(45, 35, 16);
+                    Box2 newBox = new Box2(0,0,0);
 
                     return newBox;
                 }
                 else
                 {
-                    Box3 newBox = new Box3(61, 46, 45);
+                    Box3 newBox = new Box3(0,0,0);
 
                     return newBox;
                 }

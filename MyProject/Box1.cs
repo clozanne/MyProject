@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MyProject
 {
@@ -11,13 +14,37 @@ namespace MyProject
     {
 
 
+
+        //public Box1(int l, int w, int h) : base(l, w, h)
+        //{
+
+        //    const int length = 35;
+        //    const int width = 25;
+        //    const int height = 20;
+        //}
+
+
         public Box1(int l, int w, int h) : base(l, w, h)
         {
 
-            const int length = 35;
-            const int width = 25;
-            const int height = 20;
+
         }
+
+       
+
+        //Cuboid boxy = JsonConvert.DeserializeObject<Cuboid>(File.ReadAllText(@"c:\BoxDimensions.json"));
+
+
+
+        //public Box1(int l, int w, int h) : base(l, w, h)
+        //{
+        //const int length = 35;
+        //const int width = 25;
+        //const int height = 20;
+        //}
+
+    }
+}
 
         //new private int length;
         //new private int width;
@@ -43,7 +70,6 @@ namespace MyProject
         //}
 
 
-    }
 
 
 
@@ -54,6 +80,7 @@ namespace MyProject
 
 
 
-}
+
+
 
 

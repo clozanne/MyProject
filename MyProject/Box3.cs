@@ -11,9 +11,6 @@ namespace MyProject
         public Box3(int l, int w, int h) : base(l, w, h)
         {
 
-            const int length = 61;
-            const int width = 46;
-            const int height = 45;
         }
 
         //new private int length;
