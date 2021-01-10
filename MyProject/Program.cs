@@ -47,14 +47,15 @@ namespace MyProject
             Rotate rotate = new Rotate(newDimensions);
 
 
-            Cuboid totalDimensionsNecessary = rotate.GetCuboid(newDimensions);
+            Cuboid totalDimensionsNecessary = rotate.GetBox(newDimensions);
 
             Cuboid appropriateBox = new Cuboid(0, 0, 0);
 
             ChooseBox chooseBox = new ChooseBox(totalDimensionsNecessary);
 
+            //chooseBox.GetBoxMaster();
 
-            Cuboid neededBox = chooseBox.GetCuboid();
+            Cuboid neededBox = chooseBox.GetBox();
 
             StockChecker stockChecker = new StockChecker();
 

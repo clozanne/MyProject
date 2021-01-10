@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace MyProject
 {
@@ -20,34 +21,26 @@ namespace MyProject
             this.totalDimensionsNecessary = totalDimensionsNecessary;//in this case, totalDimensionsNeeded means that it has the value of the global totalDimensionsNeeded
         }
 
-        //Cuboid box1 = new Cuboid(0, 0, 0);
-        //Cuboid box2 = new Cuboid(0, 0, 0);
-        //Cuboid box3 = new Cuboid(0, 0, 0);
+        static string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        Cuboid box1 = GetBox(1, currentDirectory);
+        Cuboid box2 = GetBox(2, currentDirectory);
+        Cuboid box3 = GetBox(3, currentDirectory);
 
 
-
-        //Box1 box1 = new Box1(0, 0, 0);
-        readonly Cuboid box1 = GetBox(1);
-        readonly Cuboid box2 = GetBox(2);
-        readonly Cuboid box3 = GetBox(3);
-        
-        //Box1 box1 = new Box1(35, 25, 20);
-        //Box2 box2 = new Box2(45, 35, 16);
-        //Box3 box3 = new Box3(61, 46, 45);
-
-        public static Cuboid GetBox(int y)
+        public static Cuboid GetBox(int y, string currentDirectory)
         {
             Cuboid box1 = new Cuboid(0, 0, 0);
             Cuboid box2 = new Cuboid(0, 0, 0);
             Cuboid box3 = new Cuboid(0, 0, 0);
             string jsonpath = "";
-            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            //string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
             
 
             if (y == 1) 
             { jsonpath = @"Box1Dimensions.json";
                 string absolutePath = Path.Combine(currentDirectory, jsonpath);
                 var json = File.ReadAllText(absolutePath);
+                
                 box1 = JsonConvert.DeserializeObject<Cuboid>(json);
                 return box1;
             }
@@ -121,7 +114,7 @@ namespace MyProject
         //}
 
 
-        public override Cuboid GetCuboid()
+        public override Cuboid GetBox()
         {
 
             if ((totalDimensionsNecessary.Length < box1.Length) && (totalDimensionsNecessary.Height < box1.Height) && (totalDimensionsNecessary.Width < box1.Width))

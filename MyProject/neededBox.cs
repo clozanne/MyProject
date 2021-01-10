@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace MyProject
 {
-    public abstract class CuboidCreator
+    public class neededBox : Cuboid
     {
-        public abstract Cuboid GetBox();
+        public neededBox(int l, int w, int h) : base(l, w, h)
+        {
+
+    
+        }
 
     }
 }

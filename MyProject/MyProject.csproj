@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="neededBox.cs" />
     <Compile Include="Box1.cs" />
     <Compile Include="Box2.cs" />
     <Compile Include="Box3.cs" />
@@ -95,9 +96,24 @@
       <Link>.editorconfig</Link>
     </None>
     <None Include="App.config" />
-    <None Include="Box3Dimensions.json" />
-    <None Include="Box2Dimensions.json" />
-    <None Include="Box1Dimensions.json" />
+    <None Include="bin\Debug\Box1Dimensions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Box2Dimensions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\Box3Dimensions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Box3Dimensions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Box2Dimensions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Box1Dimensions.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

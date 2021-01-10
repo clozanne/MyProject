@@ -36,7 +36,7 @@ namespace Tests
             }
 
             [Test]
-            public void Rotate_ShouldReturnAnObject_OfTypeCuboid()
+            public void GetBox_ShouldReturnAnObject_OfTypeCuboid()
             {
 
                 #region Arrange
@@ -45,7 +45,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                var cuboid = rotate.GetCuboid(newDimensions);
+                var cuboid = rotate.GetBox(newDimensions);
                 #endregion
 
                 #region Assert
@@ -65,7 +65,7 @@ namespace Tests
 
                 #region Act
                 int actualLength;
-                var cuboid = rotate.GetCuboid(newDimensions);
+                var cuboid = rotate.GetBox(newDimensions);
                 actualLength = cuboid.Length;
                 #endregion
 
@@ -73,6 +73,8 @@ namespace Tests
                 Assert.AreEqual(actualLength, expextedLength);
                 #endregion
             }
+
+
         }
     }
 }

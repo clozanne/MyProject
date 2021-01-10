@@ -20,7 +20,7 @@ namespace MyProject
 
 
 
-        public Cuboid GetCuboid(int[] newDimensions)
+        public Cuboid GetBox(int[] newDimensions)
         {
             int[] dimensionsSorted = setup.ReturnSorted(newDimensions);
 
@@ -34,9 +34,9 @@ namespace MyProject
 
         }
 
-        public override Cuboid GetCuboid()
+        public override Cuboid GetBox()
         {
-            Cuboid rotatedCuboid = new Cuboid(0,0,0);
+            Cuboid rotatedCuboid = new Cuboid(0, 0, 0);
 
             return rotatedCuboid;
         }
