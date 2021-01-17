@@ -13,12 +13,12 @@ namespace MyProject
 {
     public class ChooseBox : CuboidCreator
     {
-        public Cuboid totalDimensionsNecessary;
+        public Cuboid rotatedBox;
 
 
         public ChooseBox(Cuboid totalDimensionsNecessary)
         {
-            this.totalDimensionsNecessary = totalDimensionsNecessary;//in this case, totalDimensionsNeeded means that it has the value of the global totalDimensionsNeeded
+            this.rotatedBox = totalDimensionsNecessary;//in this case, totalDimensionsNeeded means that it has the value of the global totalDimensionsNeeded
         }
 
         static string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -117,7 +117,7 @@ namespace MyProject
         public override Cuboid GetBox()
         {
 
-            if ((totalDimensionsNecessary.Length < box1.Length) && (totalDimensionsNecessary.Height < box1.Height) && (totalDimensionsNecessary.Width < box1.Width))
+            if ((rotatedBox.Length < box1.Length) && (rotatedBox.Height < box1.Height) && (rotatedBox.Width < box1.Width))
             {
                 Console.WriteLine("Choose box 1. Please wait while we check for stock...");
 
@@ -128,7 +128,7 @@ namespace MyProject
 
                
             }
-            else if ((totalDimensionsNecessary.Length < box2.Length) && (totalDimensionsNecessary.Height < box2.Height) && (totalDimensionsNecessary.Width < box2.Width))
+            else if ((rotatedBox.Length < box2.Length) && (rotatedBox.Height < box2.Height) && (rotatedBox.Width < box2.Width))
             {
                 Console.WriteLine("Choose box 2. Please wait while we check for stock...");
 
@@ -136,7 +136,7 @@ namespace MyProject
 
                 return appropriateBox;
             }
-            else if ((totalDimensionsNecessary.Length < box3.Length) && (totalDimensionsNecessary.Height < box3.Height) && (totalDimensionsNecessary.Width < box3.Width))
+            else if ((rotatedBox.Length < box3.Length) && (rotatedBox.Height < box3.Height) && (rotatedBox.Width < box3.Width))
             {
                 Console.WriteLine("Choose box 3. Please wait while we check for stock...");
 

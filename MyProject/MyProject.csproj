@@ -67,7 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="neededBox.cs" />
+    <Compile Include="NeededBox.cs" />
     <Compile Include="Box1.cs" />
     <Compile Include="Box2.cs" />
     <Compile Include="Box3.cs" />

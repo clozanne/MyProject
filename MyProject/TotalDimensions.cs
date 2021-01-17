@@ -30,8 +30,10 @@ namespace MyProject
             int[] newDimensions = new int[3];
             int[] potentialDimensions1 = new int[3];
             int[] potentialDimensions2 = new int[3];
+            int[] potentialDimensions3 = new int[3];
             int volume1;
             int volume2;
+            int volume3;
 
             if (numberOfItem > 1)
             {
@@ -60,11 +62,25 @@ namespace MyProject
 
                     }
 
+                    for (int i = 0; i < potentialDimensions3.Length; i++)
+                    {
+
+                        potentialDimensions3[i++] = items.Sum(r => r.Value.Length);
+
+                        potentialDimensions3[i++] = items.Max(r => r.Value.Width);
+
+                        potentialDimensions3[i++] = items.Max(r => r.Value.Height);
+
+
+                    }
+
                 volume1 = potentialDimensions1[0] * potentialDimensions1[1] * potentialDimensions1[2];
 
                 volume2 = potentialDimensions2[0] * potentialDimensions2[1] * potentialDimensions2[2];
 
-                if (volume1 <= volume2) //potentially change this sign kater
+                volume3 = potentialDimensions3[0] * potentialDimensions3[1] * potentialDimensions3[2];
+
+                if ((volume1 <= volume2) && (volume1 <= volume3))//potentially change this sign kater
                 {
 
 
@@ -72,9 +88,17 @@ namespace MyProject
 
                     return newDimensions;
                 }
+
+                if ((volume2 <= volume3) && (volume2 <= volume1))
+                {
+                    newDimensions = potentialDimensions2;
+
+                    return newDimensions;
+                }//this stage is executed if volume1 is bigger than volume2 
+
                 else {
 
-                    newDimensions = potentialDimensions2;
+                    newDimensions = potentialDimensions3;
 
                     return newDimensions;
 

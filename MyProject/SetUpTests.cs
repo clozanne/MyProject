@@ -35,7 +35,7 @@ namespace Tests
 
         [Test]
 
-        public void CheckforExceptionThrown()
+        public void CheckforExceptionThrown_WithUserInput()
         {
             #region Arrange
             SetUp setUp = new SetUp();
@@ -43,6 +43,7 @@ namespace Tests
             #endregion
 
             #region Act
+            setUp.GetTotalNumberOfItems(line);
             #endregion
 
             #region Assert
@@ -225,7 +226,8 @@ namespace Tests
             #region Arrange
             SetUp setUp = new SetUp();
             int[] dimensionsSorted = new int[] { 1, 2, 3 };
-            int expected = 2;
+            int expected = dimensionsSorted.ElementAt(1);
+            //int expected = 2;
             #endregion
 
             #region Act
@@ -236,6 +238,98 @@ namespace Tests
             Assert.AreEqual(expected, actual);
             #endregion
         }
+
+        //protected Action<string> tempFunction;
+
+        //[Test]
+        //public virtual void AssertThrowsNullReferenceOrInvalidOperation(object getTotalNumberOfItems)
+        //{
+        //    if (tempFunction != null)
+        //    {
+        //        Assert.Throws<NullReferenceException>(() => tempFunction(null));
+        //        Assert.Throws<InvalidOperationException>(() => tempFunction(string.Empty));
+        //        Assert.Throws<InvalidOperationException>(() => tempFunction(" "));
+        //    }
+        //}
+
+        //[Test]
+        //public void Test1()
+        //{
+        //    SetUp setUp = new SetUp();
+        //    //AssertThrowsNullReferenceOrInvalidOperation(setUp.GetTotalNumberOfItems);
+        //}
+
+        ////TestDelegate throwException = () => setUp.GetTotalNumberOfItems(line);
+
+        //    [Test]
+
+        //public void hhh()
+        //{
+
+        //    #region Arrange
+        //    SetUp hsetUp = new SetUp();
+
+        //    string hline = "0";
+
+        //    TestDelegate delegateMethod = () => hsetUp.GetTotalNumberOfItems(hline);
+        //    #endregion
+
+        //    #region Act 
+
+        //    //try
+        //    //{
+        //    //    hsetUp.GetTotalNumberOfItems(hline);
+        //    //}
+        //    //catch (BoxException exception)
+        //    //{
+        //    //    var e = exception;
+        //    //}
+        //    #endregion
+
+        //    #region Assert
+
+        //    //Assert.IsNull(() => delegateMethod;
+        //    Assert.IsNull(delegateMethod);
+
+        //    //Assert.Throws<ArgumentNullException>(() => hsetUp.GetTotalNumberOfItems(hline));
+
+
+        //    //Assert.Throws<NullReferenceException>(delegateMethod);
+        //    //Assert.Throws<InvalidOperationException>(delegateMethod);
+        //    //Assert.Throws<BoxException>(delegateMethod);
+        //    //Assert.Throws<Exception>(() => hsetUp.GetTotalNumberOfItems(hline));
+        //    //assertTrue(e instanceof BoxException);
+        //    //Assert.That(e, Is.TypeOf<BoxException>());
+        //    //Assert.That<e>
+        //    //Assert.Throws<BoxException>;
+
+
+        //    #endregion
+
+        //}
+
+        //static SetUp hsetUp = new SetUp();
+
+        //static string hline = "0";
+
+        //TestDelegate throwException = () => hsetUp.GetTotalNumberOfItems(hline);
+      
+
+        //[Test]
+  
+        //public void HelloAssertThrows_NullReference_Og_InvalidOperation(TestDelegate delegateMethod)
+        //{
+        //    //TestDelegate throwException = () => setUp.GetTotalNumberOfItems(line);
+
+        //    SetUp setUp = new SetUp();
+
+        //    TestDelegate throwException = () => setUp.GetTotalNumberOfItems(line);
+
+
+        //    Assert.Throws<NullReferenceException>(delegateMethod);
+        //    Assert.Throws<InvalidOperationException>(delegateMethod);
+        //    Assert.Throws<InvalidOperationException>(delegateMethod);
+        //}
 
 
     }

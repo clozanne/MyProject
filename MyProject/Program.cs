@@ -47,11 +47,11 @@ namespace MyProject
             Rotate rotate = new Rotate(newDimensions);
 
 
-            Cuboid totalDimensionsNecessary = rotate.GetBox(newDimensions);
+            Cuboid rotatedBox = rotate.GetBox(newDimensions);
 
-            Cuboid appropriateBox = new Cuboid(0, 0, 0);
+            //Cuboid appropriateBox = new Cuboid(0, 0, 0);
 
-            ChooseBox chooseBox = new ChooseBox(totalDimensionsNecessary);
+            ChooseBox chooseBox = new ChooseBox(rotatedBox);
 
             //chooseBox.GetBoxMaster();
 

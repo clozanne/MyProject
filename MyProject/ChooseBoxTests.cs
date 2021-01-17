@@ -74,7 +74,7 @@ namespace Tests
                 #endregion
 
                 #region Act
-                Cuboid box = MyProject.ChooseBox.GetBox(1, currentDirectory);
+                var box = MyProject.ChooseBox.GetBox(1, currentDirectory);
                 #endregion
 
                 #region Assert

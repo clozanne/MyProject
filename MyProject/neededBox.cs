@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyProject
 {
-    public class neededBox : Cuboid
+    public class NeededBox : Cuboid
     {
-        public neededBox(int l, int w, int h) : base(l, w, h)
+        public NeededBox(int l, int w, int h) : base(l, w, h)
         {
 
     
