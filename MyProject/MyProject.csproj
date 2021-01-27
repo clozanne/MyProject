@@ -105,10 +105,10 @@
     <None Include="bin\Debug\Box3Dimensions.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Box3Dimensions.json">
+    <None Include="Box2Dimensions.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Box2Dimensions.json">
+    <None Include="Box3Dimensions.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Box1Dimensions.json">

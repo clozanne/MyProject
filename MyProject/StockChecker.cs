@@ -32,7 +32,6 @@ namespace MyProject
             if (isInStock == false)
             {
                 string box = neededBox.ToString();
-                //string boxNumberTemp = box.Substring(13);
                 string boxNumberTemp = box.Substring(13);
                 int boxNumber = Convert.ToInt32(boxNumberTemp);
                 string nextBoxAvailable = "Box" + (boxNumber + 1).ToString();

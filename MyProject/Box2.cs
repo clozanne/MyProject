@@ -15,27 +15,5 @@ namespace MyProject
 
         }
 
-        //new private int length;
-        //new private int width;
-        //new private int height;
-
-        //new public int Length
-        //{
-        //    get { return length; }
-
-
-        //}
-
-        //new public int Width
-        //{
-        //    get { return width; }
-
-        //}
-
-        //new public int Height
-        //{
-        //    get { return height; }
-
-        //}
     }
 }

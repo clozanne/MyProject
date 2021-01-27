@@ -52,7 +52,7 @@ namespace Tests
             public void StockChecker_CallsUponInterface_AndReturnsResult_WhenCalledWith_ABoxSize()
             {
                 #region Arrange
-                mockStock = new Mock<IStock>();//this should technically go in the setup part
+                mockStock = new Mock<IStock>();
                 stockChecker = new StockChecker();
                 Cuboid neededBox = new Cuboid(35, 25, 20);
 

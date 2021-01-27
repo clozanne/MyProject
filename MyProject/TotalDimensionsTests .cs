@@ -52,7 +52,6 @@ namespace Tests
                                                 {"item3", new Cuboid(42, 10, 13) },
 
                                             };
-                //int numberOfItem = 3;
                 int numberOfItem = items.Keys.Count;
                 TotalDimensions totalDimensions = new TotalDimensions(items);
                 #endregion

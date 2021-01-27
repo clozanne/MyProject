@@ -12,7 +12,7 @@ namespace MyProject
         public Dictionary<string, Cuboid> items;
 
 
-        //public Cuboid totalDimensionsNeeded { get; set; }  
+
 
 
         public TotalDimensions(Dictionary<string, Cuboid> items)
@@ -20,9 +20,6 @@ namespace MyProject
             this.items = items;
         }
 
-        //Box1 box1 = new Box1(35, 25, 20);
-        //Box2 box2 = new Box2(45, 35, 16);
-        //Box3 box3 = new Box3(61, 46, 45);
 
 
         public int[] GetTotalDimensionsNeeded(int numberOfItem)
@@ -80,7 +77,7 @@ namespace MyProject
 
                 volume3 = potentialDimensions3[0] * potentialDimensions3[1] * potentialDimensions3[2];
 
-                if ((volume1 <= volume2) && (volume1 <= volume3))//potentially change this sign kater
+                if ((volume1 <= volume2) && (volume1 <= volume3))
                 {
 
 
@@ -94,7 +91,7 @@ namespace MyProject
                     newDimensions = potentialDimensions2;
 
                     return newDimensions;
-                }//this stage is executed if volume1 is bigger than volume2 
+                }
 
                 else {
 

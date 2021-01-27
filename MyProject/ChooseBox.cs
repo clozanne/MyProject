@@ -18,7 +18,7 @@ namespace MyProject
 
         public ChooseBox(Cuboid totalDimensionsNecessary)
         {
-            this.rotatedBox = totalDimensionsNecessary;//in this case, totalDimensionsNeeded means that it has the value of the global totalDimensionsNeeded
+            this.rotatedBox = totalDimensionsNecessary;
         }
 
         static string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -33,7 +33,6 @@ namespace MyProject
             Cuboid box2 = new Cuboid(0, 0, 0);
             Cuboid box3 = new Cuboid(0, 0, 0);
             string jsonpath = "";
-            //string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
             
 
             if (y == 1) 
@@ -47,13 +46,13 @@ namespace MyProject
             if (y == 2) 
             { jsonpath = @"Box2Dimensions.json";
                 string absolutePath = Path.Combine(currentDirectory, jsonpath);
-                var json = File.ReadAllText(jsonpath);
+                var json = File.ReadAllText(absolutePath);
                 box2 = JsonConvert.DeserializeObject<Cuboid>(json);
                 return box2;
             }
             else { jsonpath = @"Box3Dimensions.json";
                 string absolutePath = Path.Combine(currentDirectory, jsonpath);
-                var json = File.ReadAllText(jsonpath);
+                var json = File.ReadAllText(absolutePath);
                 box3 = JsonConvert.DeserializeObject<Cuboid>(json);
                 return box3;
             }
@@ -64,54 +63,7 @@ namespace MyProject
 
            
         
-        //public static Cuboid GetBox()
-        //{
-        //    Cuboid box1 = new Cuboid(0, 0, 0);
-        //    Cuboid box2 = new Cuboid(0, 0, 0);
-        //    Cuboid box3 = new Cuboid(0, 0, 0);
-        //    string jsonpath = @"C:\Users\ozcmt3\source\repos\MyProject\MyProject\BoxDimensions.json";
-        //    using (StreamReader r = new StreamReader(jsonpath)) {
-        //        string jStr = r.ReadToEnd();
-        //        dynamic json = JValue.Parse(jStr);
-        //        foreach (var x in json)
-        //        {
-        //            if (x.Name == "Box1")
-        //            {
-        //                box1.length = x.Dimensions.length;
-        //                box1.width = x.Dimensions.width;
-        //                box1.height = x.Dimensions.height;
 
-        //                return box1;
-        //            }
-
-
-        //            else if (x.Name == "Box2")
-        //            {
-        //                box2.length = x.Dimensions.length;
-        //                box2.width = x.Dimensions.width;
-        //                box2.height = x.Dimensions.height;
-
-        //                return box2;
-
-        //            }
-
-
-        //            else if (x.Name == "Box3")
-        //            {
-        //                box3.length = x.Dimensions.length;
-        //                box3.width = x.Dimensions.width;
-        //                box3.height = x.Dimensions.height;
-
-        //                return box3;
-        //            }
-                    
-        //        }
-
-        //        return box3;
-
-        //    }
-        //    //JsonConvert.PopulateObject(jsonpath, box1);
-        //}
 
 
         public override Cuboid GetBox()

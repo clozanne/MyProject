@@ -44,9 +44,9 @@ namespace MyProject
             }
         }
 
-        public Cuboid(int l, int w, int h) //this is the constructor
+        public Cuboid(int l, int w, int h) 
         {
-            this.length = l; //this means it refers to the length mentioned above on line 19
+            this.length = l; 
             this.width = w;
             this.height = h;
         }
